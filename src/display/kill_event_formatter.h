@@ -4,11 +4,12 @@
 #ifndef KILL_EVENT_FORMATTER_H
 #define KILL_EVENT_FORMATTER_H
 
-#include <vector>
+#include <map>
+#include <string>
 
-#include "../common/telemetry.h"
-#include "../common/event.h"
 #include "event_formatter.h"
+
+class ITelemetry;
 
 class KillEventFormatter : public EventFormatter
 {

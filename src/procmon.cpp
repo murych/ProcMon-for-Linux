@@ -1,13 +1,10 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#include <iostream>
-#include <version.h>
-
-#include "configuration/procmon_configuration.h"
-#include "display/screen.h"
-#include "display/headless.h"
-#include "logging/easylogging++.h"
+#include "screen.h"
+#include "headless.h"
+#include "easylogging++.h"
+#include "cli_utils.h"
 
 INITIALIZE_EASYLOGGINGPP
 

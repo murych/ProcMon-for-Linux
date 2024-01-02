@@ -4,13 +4,12 @@
 #ifndef STORAGE_ENGINE_H
 #define STORAGE_ENGINE_H
 
-#include <vector>
 #include <tuple>
 #include <map>
 
-#include "../common/telemetry.h"
-#include "../common/event.h"
-#include "../display/screen_configuration.h"
+#include "telemetry.h"
+#include "event.h"
+#include "screen_configuration.h"
 
 class IStorageEngine
 {

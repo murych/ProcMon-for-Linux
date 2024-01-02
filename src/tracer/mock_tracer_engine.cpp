@@ -1,11 +1,10 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#include <functional>
 #include <random>
-#include <sstream>
 
 #include "mock_tracer_engine.h"
+#include "mock_storage_engine.h"
 
 MockTracerEngine::MockTracerEngine(std::shared_ptr<IStorageEngine> storageEngine, std::vector<Event> targetEvents) : ITracerEngine(storageEngine, targetEvents)
 {

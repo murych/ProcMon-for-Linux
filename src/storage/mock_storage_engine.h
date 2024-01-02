@@ -4,15 +4,9 @@
 #ifndef MOCK_STORAGE_ENGINE_H
 #define MOCK_STORAGE_ENGINE_H
 
-#include <map>
 #include <mutex>
-#include <string>
-#include <vector>
 
 #include "storage_engine.h"
-#include "../common/telemetry.h"
-#include "../common/event.h"
-#include "../display/screen_configuration.h"
 
 typedef  ITelemetry MockTelemetry;
 
@@ -52,7 +46,7 @@ public:
     int Size() override { return 0; };
 
     // Load API
-    std::tuple<uint64_t, std::string> Load(std::string filepath) { return std::make_tuple(0, ""); };
+    std::tuple<uint64_t, std::string> Load(std::string filepath) override { return std::make_tuple(0, ""); };
 };
 
 #endif // MOCK_STORAGE_ENGINE_H

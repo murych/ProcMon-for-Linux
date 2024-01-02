@@ -14,14 +14,8 @@
 #undef OK
 #define NCURSES_OK 0
 
-#include <panel.h>
-#include <vector>
-#include <unordered_map>
-
 #include "column.h"
-#include "screen_configuration.h"
 #include "event_formatter.h"
-#include "../configuration/procmon_configuration.h"
 
 // default screen dimensions
 #define MINIMUM_HEIGHT  15
@@ -74,6 +68,8 @@
 
 // column view constants
 #define COLUMN_VIEW_Y_OFFSET 2
+
+class ITelemetry;
 
 class Screen {
     public:

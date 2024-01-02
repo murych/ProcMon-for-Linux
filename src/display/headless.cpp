@@ -1,10 +1,9 @@
 #include "headless.h"
-#include "../logging/easylogging++.h"
+#include "easylogging++.h"
+#include "cli_utils.h"
 
-#include <version.h>
+#include "version.h"
 #include <csignal>
-#include <iostream>
-#include <thread>
 
 namespace
 {

@@ -6,12 +6,7 @@
 
 #define MAX_COLUMNS 5
 
-#include <ncurses.h>
-
-#undef OK
-#define NCURSES_OK 0
-
-#include <math.h>
+#include <cmath>
 
 class ScreenConfiguration
 {

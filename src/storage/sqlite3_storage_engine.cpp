@@ -3,7 +3,7 @@
 
 #include <algorithm>
 #include <functional>
-#include <bits/stdc++.h>
+#include <set>
 
 #include "sqlite3_storage_engine.h"
 
@@ -892,7 +892,7 @@ bool Sqlite3StorageEngine::Clear()
         throw std::runtime_error("Storage engine must be initialized first");
 
     // prepare statement
-    clear_sql_statement = SQL_CLEAR_EBPF; + SQL_END;
+    clear_sql_statement = SQL_CLEAR_EBPF; //+ SQL_END;
 
     sqlite3_exec(dbConnection, SQL_TX_START, NULL, NULL, nullptr);
     rc = sqlite3_exec(dbConnection, clear_sql_statement.c_str(), NULL, NULL, nullptr);

@@ -3,7 +3,7 @@
 
 
 #include "kill_event_formatter.h"
-#include "../logging/easylogging++.h"
+#include "easylogging++.h"
 
 
 std::string KillEventFormatter::GetDetails(ITelemetry event)

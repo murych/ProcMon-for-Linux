@@ -3,13 +3,12 @@
 
 #pragma once
 
-#include <experimental/filesystem>
+#include <cstring>
+#include <filesystem>
 #include <fstream>
 #include <map>
 #include <regex>
-#include <string>
 #include <vector>
-#include <iostream>
 
 namespace SyscallSchema
 {
@@ -86,7 +85,7 @@ namespace SyscallSchema
             // Regex to parse arg and name
             std::regex argTypeAndName("([a-z\\* _]+)+ ([a-z_]+)$");
 
-            for (const auto &fileEntry : std::experimental::filesystem::directory_iterator("/sys/kernel/debug/tracing/events/syscalls"))
+            for (const auto &fileEntry : std::filesystem::directory_iterator("/sys/kernel/debug/tracing/events/syscalls"))
             {
                 std::string filepath = fileEntry.path();
 

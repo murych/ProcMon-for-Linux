@@ -5,7 +5,7 @@
 #define TELEMETRY_BASE_H
 
 #include "stack_trace.h"
-#include "string.h"
+#include <cstring>
 
 #define MAX_BUFFER      128
 
@@ -29,7 +29,7 @@ struct ITelemetry
         if(a.syscall != b.syscall) return true;
         if(a.result != b.result) return true;
         if(a.duration != b.duration) return true;
-        if(strcmp((const char *)a.arguments, (const char *)b.arguments) != 0) return true;
+        if(std::strcmp((const char *)a.arguments, (const char *)b.arguments) != 0) return true;
         if(a.timestamp != b.timestamp) return true;
 
         return false;

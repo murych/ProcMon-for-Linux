@@ -13,7 +13,7 @@
 #include <bits/stdc++.h>
 
 #include "sqlite3_storage_engine.h"
-#include "../display/screen_configuration.h"
+#include "screen_configuration.h"
 
 typedef ITelemetry MockTelemetry;
 typedef StackTrace MockTrace;

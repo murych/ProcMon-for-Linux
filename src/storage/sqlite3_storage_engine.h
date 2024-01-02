@@ -3,14 +3,9 @@
 
 #pragma once
 
-#include <map>
 #include <sqlite3.h>
-#include <string>
-#include <vector>
 
 #include "storage_engine.h"
-#include "../common/telemetry.h"
-#include "../display/screen_configuration.h"
 
 class Sqlite3StorageEngine : public IStorageEngine
 {

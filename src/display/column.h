@@ -4,12 +4,10 @@
 #ifndef COLUMN_H
 #define COLUMN_H
 
-#include <ncurses.h>
+#include <ncurses/ncurses.h>
 #include <panel.h>
 #include <string>
 #include <vector>
-
-#include "../logging/easylogging++.h"
 
 #define COLUMN_PADDING          2
 

@@ -3,9 +3,8 @@
 
 #pragma once
 
-#include <string>
-
-#include "../../common/printable.h"
+#include <cstdint>
+#include <unistd.h>
 
 #define MAX_BUFFER 128
 #define MAX_STACK_FRAMES 32

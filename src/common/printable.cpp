@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 
 #include "printable.h"
+#include <typeinfo>
 
 const std::string IPrintable::Print() const
 {

@@ -4,12 +4,7 @@
 #ifndef EVENT_FORMATTER_H
 #define EVENT_FORMATTER_H
 
-#include <vector>
-
-#include "../common/telemetry.h"
-#include "../common/event.h"
-#include "../display/screen_configuration.h"
-#include "../configuration/procmon_configuration.h"
+#include "procmon_configuration.h"
 
 class EventFormatter
 {

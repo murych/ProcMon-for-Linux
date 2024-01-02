@@ -3,28 +3,17 @@
 
 #pragma once
 
-#include <iostream>
-#include <memory>
-#include <string>
-#include <sstream>
-#include <vector>
 #include <ctime>
-
 #include <getopt.h>
-#include <time.h>
 
-#include "../storage/mock_storage_engine.h"
-#include "../storage/storage_engine.h"
-#include "../storage/storage_proxy.h"
-#include "../tracer/tracer_engine.h"
-#include "../tracer/mock_tracer_engine.h"
-#include "../tracer/ebpf/ebpf_tracer_engine.h"
-#include "../common/event.h"
-#include "../common/cli_utils.h"
-#include "../logging/easylogging++.h"
+#include "storage_proxy.h"
+#include "ebpf/ebpf_tracer_engine.h"
 
 #define DEFAULT_TIMESTAMP_LENGTH 25
 #define DEFAULT_DATESTAMP_LENGTH 11
+
+class IStorageEngine;
+class ITracerEngine;
 
 struct ProcmonArgs
 {

@@ -2,6 +2,8 @@
 // Licensed under the MIT License.
 
 #include "procmon_configuration.h"
+#include "easylogging++.h"
+#include "cli_utils.h"
 
 void ProcmonConfiguration::HandlePidArgs(char *pidArgs)
 {

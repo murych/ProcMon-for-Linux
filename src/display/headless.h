@@ -4,7 +4,7 @@
 #ifndef HEADLESS_H
 #define HEADLESS_H
 
-#include "../configuration/procmon_configuration.h"
+#include "procmon_configuration.h"
 
 class Headless
 {

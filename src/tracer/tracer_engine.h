@@ -8,12 +8,13 @@
 #include <memory>
 #include <map>
 
-#include "../common/event.h"
-#include "../storage/storage_engine.h"
+#include "event.h"
 
 #define TRACER_RUNNING          0
 #define TRACER_SUSPENDED        1
 #define TRACER_STOP             2
+
+class IStorageEngine;
 
 class ITracerEngine
 {

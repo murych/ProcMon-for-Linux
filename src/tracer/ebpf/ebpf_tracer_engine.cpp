@@ -2,8 +2,9 @@
 // Licensed under the MIT License.
 
 #include "ebpf_tracer_engine.h"
-#include "../../logging/easylogging++.h"
+#include "easylogging++.h"
 #include <iostream>
+#include <elf.h>
 
 #define STAT_MAX_ITEMS      10
 #define CONFIG_ITEMS        1

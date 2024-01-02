@@ -2,8 +2,8 @@
 // Licensed under the MIT License.
 
 #include "event_formatter.h"
-#include "../logging/easylogging++.h"
-#include "errno.h"
+#include "easylogging++.h"
+#include <errno.h>
 #include <iomanip>
 
 

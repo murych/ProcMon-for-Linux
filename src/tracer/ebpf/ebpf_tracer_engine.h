@@ -3,20 +3,15 @@
 
 #pragma once
 
-#include <BPF.h>
-#include <map>
-#include <memory>
-#include <vector>
+#include <bcc/BPF.h>
 #include <thread>
-#include <elf.h>
 
 #include "syscall_schema.h"
 #include "bpf_prog.h"
 #include "raw_ebpf_event.h"
-#include "../../common/cancellable_message_queue.h"
-#include "../tracer_engine.h"
-#include "../../common/event.h"
-#include "../../storage/storage_engine.h"
+#include "cancellable_message_queue.h"
+#include "tracer_engine.h"
+#include "storage_engine.h"
 
 #define MAX_PIDS           10
 
