@@ -10,7 +10,7 @@ endif()
 # Collect all required libraries from system.
 find_package(Curses REQUIRED)
 find_package(SQLite3 REQUIRED)
-
+find_package(Threads REQUIRED)
 pkg_search_module(Bcc REQUIRED libbcc)
 pkg_search_module(Bpf REQUIRED libbpf)
 

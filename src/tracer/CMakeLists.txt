@@ -17,7 +17,7 @@ target_compile_options(tracer-static PUBLIC -pthread)
 target_link_libraries(
   tracer-static
   PUBLIC procmon::common procmon::storage
-  PRIVATE procmon::logging ${Bpf_LIBRARIES} ${Bcc_LIBRARIES})
+  PRIVATE procmon::logging Threads::Threads ${Bpf_LIBRARIES} ${Bcc_LIBRARIES})
 target_include_directories(
   tracer-static
   PUBLIC $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src/tracer/>
