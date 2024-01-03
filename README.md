@@ -16,20 +16,23 @@ Checkout our [install instructions](INSTALL.md) for distribution specific steps 
 
 ## Building Procmon from source
 
-
 ### 1. Install build dependencies
+
+DEB-based distributions: tested on Debian 11, Debian 12, Ubuntu 20.04 Focal, Ubuntu 22.04 Jammy.
+
 ```bash
-sudo apt-get -y install bison build-essential flex git libedit-dev \
-  libllvm6.0 llvm-6.0-dev libclang-6.0-dev python zlib1g-dev libelf-dev
+sudo apt-get install -y bpfcc-tools build-essential cmake git pkg-config \
+    libbpfcc libbpf-dev libbpfcc-dev libedit-dev libelf-dev libncurses-dev libsqlite3-dev
 ```
 
 ### 2. Build Procmon
+
 ```bash
 git clone https://github.com/Microsoft/Procmon-for-Linux
 cd Procmon-for-Linux
 mkdir build
 cd build
-cmake ..
+cmake -DCMAKE_BUILD_TYPE=Release ..
 make
 ```
 
