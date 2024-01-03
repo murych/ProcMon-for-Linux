@@ -2,14 +2,12 @@
 // Licensed under the MIT License.
 
 #include "screen.h"
-// #include "event_formatter.h"
 #include "kill_event_formatter.h"
 #include "easylogging++.h"
 #include "telemetry.h"
 #include "version.h"
 
 #include <chrono>
-// #include <thread>
 #include <set>
 
 Screen::Screen()

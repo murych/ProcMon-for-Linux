@@ -4,7 +4,7 @@
 #ifndef COLUMN_H
 #define COLUMN_H
 
-#include <ncurses/ncurses.h>
+#include <ncurses.h>
 #include <panel.h>
 #include <string>
 #include <vector>

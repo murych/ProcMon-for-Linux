@@ -6,35 +6,35 @@
 
 Column::Column(int height, int width, int y, int x, std::string columnName)
 {
-    this->height = height;
-    this->width = width;
-    this->y = y;
-    this->x = x;
-    this->columnName = columnName;
+    height = height;
+    width = width;
+    y = y;
+    x = x;
+    columnName = std::move(columnName);
 
     // init ncurses objects
-    this->win = newwin(height, width, y, x);
-    this->panel = new_panel(this->win);
+    win = newwin(height, width, y, x);
+    panel = new_panel(win);
 
     // init local column datastore
-    this->columnData.clear();
+    columnData.clear();
 
     // Add Header to window
     columnPrintFill(COLUMN_HEADER_COLOR, 0, 0, (columnName + ":").c_str());
 
-    this->currentLine = 1;                          // init to 1 to account for column header
-    this->highlight = false;                        // init header highlight to off
+    currentLine = 1;                          // init to 1 to account for column header
+    highlight = false;                        // init header highlight to off
     refreshColumn();
 }
 
 Column::~Column()
 {
     // clean up column data
-    this->columnData.clear();
+    columnData.clear();
 
     // free up ncurses objects
-    del_panel(this->panel);
-    delwin(this->win);
+    del_panel(panel);
+    delwin(win);
 }
 
 void Column::addLine(std::string value)
